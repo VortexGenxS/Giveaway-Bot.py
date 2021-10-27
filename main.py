@@ -5,6 +5,8 @@ import os
 import asyncio
 import datetime
 
+client = commands.Bot(command_prefix="+")
+
 @client.event
 async def on_ready():
     print("Bot Ready")
@@ -42,4 +44,4 @@ async def ping(ctx):
     await ctx.send("Pong!")
 
 token = os.environ.get("TOKEN") #paste token on secrets
-client.run(token, bot=True)
+client.run(token)
